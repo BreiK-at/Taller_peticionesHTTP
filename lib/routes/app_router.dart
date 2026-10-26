@@ -26,8 +26,8 @@ class AppRoutes {
   static const String dishDetail = '/dishes/:id';
 }
 
-final GoRouter appRouter = GoRouter(
-  initialLocation: AppRoutes.dashboard,
+GoRouter createRouter({String initialLocation = AppRoutes.dashboard}) => GoRouter(
+  initialLocation: initialLocation,
   routes: [
     GoRoute(
       path: AppRoutes.dashboard,
